@@ -4,16 +4,16 @@ My personal dotfiles
 
 ## Installation
 
-Install the following using a package manager
+1. Install the following using a package manager
 - GNU stow
 - git
 
-Clone this repo
+2. Clone this repo
 ```
 git clone https://github.com/harikr1s/dotfiles.git && cd dotfiles
 ```
 
-Use stow to create symlinks
+3. Use stow to create symlinks
 ```
 stow .
 ```
