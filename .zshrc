@@ -4,6 +4,10 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
+plug "MichaelAquilina/zsh-you-should-use"
+plug "chivalryq/git-alias"
+plug "kutsan/zsh-system-clipboard"
+plug "zap-zsh/sudo"
 
 # Load and initialise completion system
 autoload -Uz compinit
