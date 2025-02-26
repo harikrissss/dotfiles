@@ -132,3 +132,11 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+source /opt/ros/humble/setup.zsh
+
+# argcomplete for ros2, colcon, docker
+eval "$(register-python-argcomplete3 ros2)"
+eval "$(register-python-argcomplete3 colcon)"
+ 
+source <(docker completion zsh)
