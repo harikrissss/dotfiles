@@ -13,9 +13,12 @@ plug "zap-zsh/sudo"
 autoload -Uz compinit
 compinit
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/config.toml)"
-fi
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+eval "$(starship init zsh)"
+
+#if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#  eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/zen.toml)"
+#fi
 
 eval "$(zoxide init --cmd cd zsh)"
 
