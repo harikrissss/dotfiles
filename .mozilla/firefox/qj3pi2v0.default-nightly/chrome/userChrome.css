@@ -1,0 +1,10 @@
+#tabbrowser-tabs{
+  counter-reset: n_tabs 0;
+}
+.tabbrowser-tab .tab-content{padding-left: 2px;}
+.tabbrowser-tab .tab-content::before{
+  display: -moz-box;
+  padding-right:2px;
+  counter-increment: n_tabs;
+  content: counter(n_tabs);
+}
