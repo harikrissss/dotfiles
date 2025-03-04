@@ -1,0 +1,77 @@
+[prompt]
+transient = true
+left = ["os", "path", "git", "package", "env_var", "python", "golang", "node", "rust", "battery"]
+right = ["time", "cmd_duration", "exit", "jobs"]
+final_line = { type = "text", style = "plain", foreground_templates = ["{{ if gt .ExitCode 0 }}red{{ else }}white{{ end }}"], template = "{{ if .Root }}#{{ else }}❯{{ end }} " }
+
+[os]
+style = "plain"
+format = "{{ .Icon }} "
+
+[path]
+style = "plain"
+format = "{{ .Path }} "
+home_icon = "~"
+truncation_length = 3
+truncation_symbol = "…/"
+folder_separator_icon = "/"
+folder_icon = "📁"
+
+[git]
+style = "plain"
+format = "{{ .HEAD }}{{ .UpstreamStatus }}{{ if .Status }} {{ .Status }}{{ end }} "
+up_arrow = "⇡"
+down_arrow = "⇣"
+show_status = true
+status_format = "[{{ .Staging.Changed }}{{ .Working.Changed }}]"
+
+[package]
+style = "plain"
+format = "📦 {{ .Version }} "
+
+[env_var]
+style = "plain"
+format = "{{ .Var }} "
+variables = ["AWS_PROFILE", "VIRTUAL_ENV", "CONDA_ENV_PATH"]
+
+[python]
+style = "plain"
+format = "🐍 {{ .Venv }} {{ .Version }} "
+
+[golang]
+style = "plain"
+format = "🐹 {{ .Version }} "
+
+[node]
+style = "plain"
+format = "⬢ {{ .Version }} "
+
+[rust]
+style = "plain"
+format = "🦀 {{ .Version }} "
+
+[battery]
+style = "plain"
+format = "{{ .Icon }}{{ .Percentage }}% "
+charging_icon = "⚡"
+discharging_icon = "🔋"
+charged_icon = "🔌"
+thresholds = [10, 20, 30, 50]
+
+[time]
+style = "plain"
+format = "🕒 {{ .CurrentDate | date \"15:04\" }} "
+
+[cmd_duration]
+style = "plain"
+format = "⏱️ {{ .Duration }} "
+min_time = 2000000000
+
+[exit]
+style = "plain"
+format = "✘ {{ .Code }} "
+success = false
+
+[jobs]
+style = "plain"
+format = "🔃 {{ .Number }} "
