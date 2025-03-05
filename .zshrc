@@ -16,16 +16,18 @@ compinit
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"if
 
-#if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-#  eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/config.toml)"
-#fi
+# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#   eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/config.toml)"
+# fi
 
 eval "$(zoxide init --cmd cd zsh)"
 
-source /opt/ros/humble/setup.zsh
+[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
 
-# argcomplete for ros2, colcon, docker
-eval "$(register-python-argcomplete3 ros2)"
-eval "$(register-python-argcomplete3 colcon)"
- 
-source <(docker completion zsh)
+# source /opt/ros/humble/setup.zsh
+# 
+# # argcomplete for ros2, colcon, docker
+# eval "$(register-python-argcomplete3 ros2)"
+# eval "$(register-python-argcomplete3 colcon)"
+#  
+# source <(docker completion zsh)
