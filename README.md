@@ -20,7 +20,9 @@ cd dotfiles
 stow .
 ```
 
-### tmux dependencies
+### Dependencies
+
+#### tmux
 
 [Tmux plugin manager](https://github.com/tmux-plugins/tpm)
 ```
@@ -29,7 +31,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 `Prefix + Shift + I` to load tmux environment.
 
-### Zsh dependencies
+#### Zsh
 
-[Zap - Zsh plugin manager](https://github.com/zap-zsh/zap)
-[Zoxide - as `cd` alternative](https://github.com/ajeetdsouza/zoxide)
+- [Zap - plugin manager](https://github.com/zap-zsh/zap)
+- [Zoxide - `cd` alternative](https://github.com/ajeetdsouza/zoxide)
