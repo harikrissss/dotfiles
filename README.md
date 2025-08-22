@@ -2,17 +2,21 @@
 
 My dotfiles for:
 
-- [kitty - terminal emulator](https://sw.kovidgoyal.net/kitty/)
-- [Zsh - shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-- [Oh My Posh - prompt theme](https://ohmyposh.dev/)
-- [tmux - terminal multiplexer](https://github.com/tmux/tmux)
-- [Kanata - keyboard remapper](https://github.com/jtroo/kanata)
+- [Kanata](https://github.com/jtroo/kanata) - kb remapper
+- [kitty](https://sw.kovidgoyal.net/kitty/) - terminal emulator
+- [neovim](https://github.com/neovim/neovim/) - text editor
+- [Oh My Posh](https://ohmyposh.dev/) - prompt theme
+- [tmux](https://github.com/tmux/tmux) - terminal multiplexer
+- [Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) - shell
 
 ## Installation
 
 Install GNU Stow using any package manager.
 
-Clone this repo.
+Clone this repo using these additional flags:
+```
+git clone --recurse-submodules --remote-submodules
+```
 
 Create symlinks using stow.
 ```
@@ -24,7 +28,7 @@ stow .
 
 #### tmux
 
-[Tmux plugin manager](https://github.com/tmux-plugins/tpm)
+[Tmux plugin manager](https://github.com/tmux-plugins/tpm) - plugin manager
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
@@ -33,5 +37,5 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 #### Zsh
 
-- [Zap - plugin manager](https://github.com/zap-zsh/zap)
-- [Zoxide - `cd` alternative](https://github.com/ajeetdsouza/zoxide)
+- [Zap](https://github.com/zap-zsh/zap) - plugin manager
+- [Zoxide](https://github.com/ajeetdsouza/zoxide) - `cd` alternative
