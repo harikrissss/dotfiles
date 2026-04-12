@@ -13,7 +13,7 @@ My dotfiles for:
 
 Install GNU Stow using any package manager.
 
-Clone this repo using these additional flags:
+Clone this repo with these additional flags:
 ```
 git clone --recurse-submodules --remote-submodules
 ```

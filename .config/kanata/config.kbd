@@ -1,6 +1,11 @@
 ;; capslock-tap -> esc
 ;; capslock-hold -> lctrl
 
+(defcfg
+      process-unmapped-keys yes
+      log-layer-changes yes
+)
+
 (defsrc
 	caps
 )
